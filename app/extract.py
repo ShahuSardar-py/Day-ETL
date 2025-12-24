@@ -25,3 +25,5 @@ def insert_raw(data:dict):
 
     conn.commit()
     conn.close()
+
+    
