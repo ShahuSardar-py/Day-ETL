@@ -2,10 +2,10 @@ from app.db import get_connection
 
 def insert_raw(data:dict):
     conn = get_connection()
-    cusrsor= conn.cursor()
+    cur= conn.cursor()
 
     query="""
-    INSERT INTO raw_daily_logs(
+    INSERT OR REPLACE INTO raw_daily_logs(
     log_date,
     sleep_hours,
     sleep_quality,
@@ -26,4 +26,3 @@ def insert_raw(data:dict):
     conn.commit()
     conn.close()
 
-    

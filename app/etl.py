@@ -1,10 +1,11 @@
 from app.extract import insert_raw
-from app.transorm import transform_raw_log
+from app.transform import transform_raw_log
 from app.load import upsert_daily_metrics
+
 from app.db import get_connection
 
 def run_daily_el(rdata:dict):
-    insert_raw(data)
+    insert_raw(rdata)
     conn = get_connection()
     cur = conn.cursor()
 
