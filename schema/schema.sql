@@ -11,11 +11,18 @@ CREATE TABLE raw_daily_logs (
 
 CREATE TABLE daily_metrics (
     log_date TEXT PRIMARY KEY,
+
     day_of_week TEXT,
+    is_weekend INTEGER,
+
     sleep_bucket TEXT,
+    sleep_score REAL,
+
     mood_score REAL,
-    focus_intensity REAl,
+    focus_intensity REAL,
     productivity_score REAL,
+
     day_score REAL,
-    dat_type TEXT
+    day_type TEXT
 );
+

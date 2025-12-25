@@ -32,7 +32,7 @@ def day_type(day_score):
     else:
         return "peak"
 
-
+#main transformer function
 def transform_raw_log(log: dict) -> dict:
     date_obj = datetime.strptime(log["log_date"], "%Y-%m-%d")
 
